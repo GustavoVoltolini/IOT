@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serial Monitor",
+      "type": "shell",
+      "command": "pio device monitor",
+      "problemMatcher": [],
+      "presentation": { "focus": true, "panel": "dedicated" }
+    },
+    {
+      "label": "Gravar no ESP32",
+      "type": "shell",
+      "command": "pio run -e esp32dev -t upload",
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "Gravar e abrir Serial Monitor",
+      "type": "shell",
+      "command": "pio run -e esp32dev -t upload; if ($?) { pio device monitor }",
+      "problemMatcher": [],
+      "presentation": { "focus": true, "panel": "dedicated" }
+    }
+  ]
+}

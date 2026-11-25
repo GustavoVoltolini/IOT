@@ -1,0 +1,4 @@
+.pio/
+.vscode/.browse*
+.vscode/ipch
+include/secrets.h
